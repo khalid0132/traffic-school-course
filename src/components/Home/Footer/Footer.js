@@ -1,65 +1,85 @@
 import React from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-import FooterExtra from '../FooterExtra/FooterExtra';
+import { faPhone, faEnvelopeSquare, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+
 import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faInstagram, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram, faGooglePlusG, faEmail } from '@fortawesome/free-brands-svg-icons';
+import { Form } from 'react-bootstrap';
 
 const Footer = () => {
-    const noNamed = [
-        {name: "Emergency Dental Care" , link: "/emergency"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Treatment of Personal Diseases" , link: "/personal-treatment"},
-        {name: "Tooth Extraction" , link: "/tooth-extract"},
-        {name: "Check Up" , link: "/checkup"},
-    ]
-    const ourAddress = [
-        {name: "New York - 101010 Hudson" , link: "//google.com/map"},
-        {name: "Yards" , link: "//google.com/map"},
-       
-    ]
-    const oralHealth = [
-        {name: "Emergency Dental Care" , link: "/emergency"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Treatment of Personal Diseases" , link: "/personal-treatment"},
-        {name: "Tooth Extraction" , link: "/tooth-extract"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Check Up" , link: "/checkup"}
-    ]
-    const services = [
-        {name: "Emergency Dental Care" , link: "/emergency"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Treatment of Personal Diseases" , link: "/personal-treatment"},
-        {name: "Tooth Extraction" , link: "/tooth-extract"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Check Up" , link: "/checkup"},
-        {name: "Check Up" , link: "/checkup"}
-    ]
+   
     return (
-        <footer className="footer-area clear-both">
-        <div className="container pt-5">
-            <div className="row py-5">
-                <FooterExtra key={1} menuTitle={"."} menuItems={noNamed}/>
-                <FooterExtra key={2} menuTitle="Services" menuItems={services}/>
-                <FooterExtra key={3} menuTitle="Oral Health" menuItems={oralHealth}/>
-                <FooterExtra key={4} menuTitle="Our Address" menuItems={ourAddress}> 
-                    <ul className="social-media list-inline">
-                        <li className="list-inline-item"><a href="//facebook.com"><FontAwesomeIcon className="icon active-icon" icon={faFacebookF} /></a></li>
-                        <li className="list-inline-item"><a href="//google.com"><FontAwesomeIcon className="icon" icon={faGooglePlusG} /></a></li>
-                        <li className="list-inline-item"><a href="//instagram.com"><FontAwesomeIcon className="icon" icon={faInstagram} /></a></li>
-                    </ul>
-                    <div className="mt-5">
-                        <h6>Call now</h6>
-                        <button className="btn btn-primary">+46737139307</button>
+        <footer className="footer-area clear-both mt-5 text-white">
+            <div className="d-flex justify-content-">
+            <div className="container">
+                <div className="row mt-5 mb-5">
+                    <div className="col-md-4 text-align-center">
+                        <ul className="social-media list-inline ">
+                            <li>
+                            <FontAwesomeIcon className="icon active-icon cursor-pointer" icon={faPhone} />
+                            </li>
+                        </ul>
+                         <h4>Call Us On</h4>
+                        <p>+46737139307</p>
                     </div>
-                </FooterExtra>
+                    <div className="col-md-4">
+                    <ul className="social-media list-inline">
+                            <li>
+                            <FontAwesomeIcon className="icon active-icon cursor-pointer" icon={faEnvelopeSquare} />
+                            </li>
+                        </ul>
+                        <h4>E-mail Us</h4>
+                        <p>khalid0132@sweden.se</p>
+                    </div>
+                    <div className="col-md-4">
+                    <ul className="social-media list-inline">
+                            <li>
+                            <FontAwesomeIcon className="icon active-icon cursor-pointer" icon={faMapMarkerAlt} />
+                            </li>
+                        </ul>
+                        <h4>Visit Office</h4>
+                        <p>Visättravagen 21, Huddinge, Sweden</p>
+                    </div>
+                </div>
+
+                <div className="row mt-5">
+                    <div className="col-md-12">
+                        <Form>
+                            <div className="row">
+                                <div className="col-md-6 mb-4">
+                                    <input type="text" class="form-control" placeholder="Username"/>
+                                </div>
+                                <div className="col-md-6 mb-4">
+                                    <input type="email" class="form-control" placeholder="E-mail"/>
+                                </div>
+                            </div>
+
+                        <div className="row">
+                        <div className="col-md-12 mb-4">
+                            <textarea name="message" className="form-control" placeholder="Your Message"></textarea>
+                        </div>
+                        </div>
+                        </Form>
+                        <button className="btn btn-primary">Skicka Meddelande</button>
+                    </div>
+                </div>
             </div>
-            <div className="copyRight text-center">
+           </div>
+            
+
+        
+                <div className="col-md-12 d-flex justify-content-center">
+                    <ul className="mt-2 social-media list-inline">
+                    <FontAwesomeIcon className="icon active-icon m-4 cursor-pointer" icon={faFacebookF} />
+                    <FontAwesomeIcon className="icon active-icon m-4 cursor-pointer" icon={faInstagram} />
+                    <FontAwesomeIcon className="icon active-icon m-4 cursor-pointer" icon={faGooglePlusG} />
+                  
+                        {/* <li> <span><a href="#"><i className="fab faYoutubeSquare"></i></a></span></li> */}
+                    </ul>
+                </div>
+            <div className="copyRight text-center mt-5">
                 <p>Copyright {(new Date()).getFullYear()} All Rights Reserved by Khalid from Stockholm</p>
             </div>
-        </div>
     </footer>
     );
 };
