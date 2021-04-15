@@ -3,8 +3,7 @@ import CourseDetail from '../CourseDetail/CourseDetail';
 import theory from './theory3.jpg';
 import instructor from './instructor.jpeg';
 import driving from './driving.jpg'
-// import instructor from '../../images/instructor.jpeg';
-// import driving from '../../images/driving.jpg'
+
 
 const courseData = [
     {
