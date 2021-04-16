@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home/Home/Home';
 import Admin from './components/Admin/Admin';
+import CreateAdmin from './components/Admin/CreateAdmin/CreateAdmin';
 
 function App() {
   return (
@@ -17,6 +18,12 @@ function App() {
             <Home />
           </Route>
           <Route path="/admin">
+            <Admin></Admin>
+          </Route>
+          <Route path="/createAdmin">
+            <CreateAdmin></CreateAdmin>
+          </Route>
+          <Route path="/addCourse">
             <Admin></Admin>
           </Route>
         </Switch>
