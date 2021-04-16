@@ -9,6 +9,7 @@ import {
 import Home from './components/Home/Home/Home';
 import Admin from './components/Admin/Admin';
 import CreateAdmin from './components/Admin/CreateAdmin/CreateAdmin';
+import Reviews from './components/Reviews/Reviews';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route path="/createAdmin">
             <CreateAdmin></CreateAdmin>
+          </Route>
+          <Route path="/reviews">
+            <Reviews></Reviews>
           </Route>
           <Route path="/addCourse">
             <Admin></Admin>
