@@ -10,6 +10,7 @@ import Home from './components/Home/Home/Home';
 import Admin from './components/Admin/Admin';
 import CreateAdmin from './components/Admin/CreateAdmin/CreateAdmin';
 import Reviews from './components/Reviews/Reviews';
+import CourseOrder from './components/CourseOrder/CourseOrder';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <Route path="/addCourse">
             <Admin></Admin>
+          </Route>
+          <Route path="/courseOrder">
+            <CourseOrder></CourseOrder>
           </Route>
         </Switch>
     </Router>
