@@ -14,6 +14,7 @@ import CreateAdmin from './components/Admin/CreateAdmin/CreateAdmin';
 import Reviews from './components/Reviews/Reviews';
 import CourseOrder from './components/CourseOrder/CourseOrder';
 import Login from './components/Login/Login';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 
@@ -27,18 +28,18 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/admin">
+          <PrivateRoute path="/admin">
             <Admin></Admin>
-          </Route>
+          </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>
           <Route path="/createAdmin">
             <CreateAdmin></CreateAdmin>
           </Route>
-          <Route path="/reviews">
+          <PrivateRoute path="/reviews">
             <Reviews></Reviews>
-          </Route>
+          </PrivateRoute>
           <Route path="/courses">
             <Courses></Courses>
           </Route>

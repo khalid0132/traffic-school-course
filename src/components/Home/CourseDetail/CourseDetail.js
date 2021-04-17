@@ -17,7 +17,7 @@ const CourseDetail = ({course}) => {
         <Card.Img style={{height: '150px'}} variant="top" src={imageURL} />
         <Card.Body>
             <Card.Title className="text-center">{name}</Card.Title>
-            <Card.Text className="font-weight-bold">Sek {price} /course <Button className="ml-3" variant="primary"  onClick={()=>handleBuy(_id)} >Köp nu</Button></Card.Text>
+            <Card.Text className="font-weight-bold">Sek {price} /kurs <Button className="ml-3" variant="primary"  onClick={()=>handleBuy(_id)} >Order Now/Beställa nu</Button></Card.Text>
             
         </Card.Body>
     </Card>
