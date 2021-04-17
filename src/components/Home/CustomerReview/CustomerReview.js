@@ -25,22 +25,22 @@ import ReviewDetail from '../ReviewDetail/ReviewDetail';
 //     }
 // ]
 const CustomerReview = () => {
-    const [reviews, getReviews] = useState([]);
+    const [reviews, setReviews] = useState([]);
     useEffect(() =>{
-        fetch('http://localhost:7200/getReview')
+        fetch('http://localhost:7200/reviews')
         .then (res => res.json())
-        .then (data => getReviews(data))
+        .then (data => setReviews(data))
     }, [])
     return (
-        <section className="testimonials my-5 py-5">
+        <section style={{backgroundColor: 'lightgray'}} className="testimonials my-5 py-5 customer-review">
         <div className="container text-center">
          
-           <h5 style={{color: 'red'}}>CUSTOMERS' REVIEW</h5>
-            <h2>Our Satisfied Customers Always Provide Great Feedback</h2>
+           <h5 style={{color: 'red'}}>KUNDRECENSIONER / Customers' Reviews</h5>
+            <h2>Våra nöjda kunder ger alltid bra feedback !!!</h2>
            </div>
         
            <div className="d-flex justify-content-center">
-        <div className="w-75 row mt-5 pt-5">
+        <div className="w-75 row pt-5">
             {
                 reviews.map(review => <ReviewDetail review={review} key={review.name}></ReviewDetail>)
             }

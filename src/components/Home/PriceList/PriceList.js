@@ -5,7 +5,7 @@ const PriceList = ({pr}) => {
 
 
     return (
-        <Card style={{ width: '18rem' }} className="container mb-4 mt-4 border-danger bg-danger p-5" >
+        <Card style={{ width: '18rem' }} className="container mb-4 mt-4 border-danger bg-success p-5" >
             <Card.Body>
                 <Card.Title className= "text-center">{pr.name}</Card.Title>
                 <Card.Text className= "text-white">Typ: {pr.type}</Card.Text>

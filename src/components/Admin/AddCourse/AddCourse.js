@@ -46,7 +46,7 @@ const AddCourse = () => {
     return (
         <section className="container-fluid row">
             <Sidebar></Sidebar>
-            <div className="col-md-10 p-5 pr-5" style={{ position: "absolute", right: 0, backgroundColor: "red" }}>
+            <div className="col-md-10 p-5 pr-5" style={{ position: "absolute", right: 0, backgroundColor: "lightgray" }}>
                 <h5 className="text-brand">Add a Course</h5>
                 <form className="p-3" onSubmit = {handleSubmit(onSubmit)}>
                     <div className="form-group">

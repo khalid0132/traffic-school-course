@@ -3,6 +3,8 @@ import axios from 'axios';
 import Sidebar from '../Admin/Sidebar/Sidebar';
 import { useForm } from 'react-hook-form';
 
+
+
 const Reviews = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [imageURL, setImageURL] = useState(null);
@@ -44,19 +46,19 @@ const Reviews = () => {
           });
     }
     return (
-        <section className="container-fluid row">
-        <Sidebar></Sidebar>
-        <div className="col-md-10 p-5 pr-5" style={{ position: "absolute", right: 0, backgroundColor: "red" }}>
-            <h5 className="text-brand">Send Your Comment</h5>
+        <section className="container row ">
+        
+        <div className="col-md-12 p-5 pr-5 mr-5" style={{ position: "absolute", right: 0, backgroundColor: "#f9f9f9" }}>
+            <h5 className="text-brand text-center">Send Your Comment / Skicka din kommentar</h5>
             <form className="p-3" onSubmit = {handleSubmit(onSubmit)}>
                 <div className="form-group">
-                    <input {...register("quote",{ required: true })}  placeholder="Add Comment" className="form-control" />
+                    <input {...register("quote",{ required: true })}  placeholder="Add Comment / Kommentar" className="form-control" />
                 </div>
                 <div className="form-group">
-                    <input {...register("name",{ required: true })}  placeholder="Name" className="form-control" />
+                    <input {...register("name",{ required: true })}  placeholder="Name / Namn" className="form-control" />
                 </div>
                 <div className="form-group">
-                    <input {...register("from",{ required: true })}  placeholder="City" className="form-control" />
+                    <input {...register("from",{ required: true })}  placeholder="City / Stad" className="form-control" />
                 </div>
               
                 {/* <div className="form-group">
@@ -70,7 +72,7 @@ const Reviews = () => {
              
               
                 <div className="form-group">
-                    <button type="submit" className="btn btn-secondary">Send Reviews</button>
+                    <button type="submit" className="btn btn-success">Send Reviews / Skicka recensioner</button>
                 </div>
             </form>
         </div>

@@ -34,11 +34,11 @@ const Courses = () => {
     return (
         <section className="courses-container mt-5">
         <div className="text-center">
-            <h5 style={{color: 'red'}}>OUR COURSES</h5>
-            <h2>Courses We Provide</h2>
+            <h5 style={{color: 'red'}} className="mt-4">Våra Kurser</h5>
+            <h2>Kurser vi erbjuder...</h2>
         </div>
         <div className="d-flex justify-content-center">
-        <div className="w-75 row mt-5 pt-5">
+        <div className="w-75 row pt-4">
             {
                 courses.map(course => <CourseDetail course={course} key={course.name}></CourseDetail>)
             }
