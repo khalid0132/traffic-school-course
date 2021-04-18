@@ -47,14 +47,14 @@ const AddCourse = () => {
         <section className="container-fluid row">
             <Sidebar></Sidebar>
             <div className="col-md-10 p-5 pr-5" style={{ position: "absolute", right: 0, backgroundColor: "lightgray" }}>
-                <h5 className="text-brand">Add a Course</h5>
+                <h5 className="text-brand">Skapa kurs</h5>
                 <form className="p-3" onSubmit = {handleSubmit(onSubmit)}>
                     <div className="form-group">
-                        <input {...register("name",{ required: true })}  placeholder="Add a course" className="form-control" />
+                        <input {...register("name",{ required: true })}  placeholder="Lägg till en kurs" className="form-control" />
                     </div>
                   
                     <div className="form-group">
-                        <input {...register("price",{ required: true })} placeholder="Price of the Course" className="form-control" />
+                        <input {...register("price",{ required: true })} placeholder="kursens pris" className="form-control" />
                         
                     </div>
                  
@@ -64,7 +64,7 @@ const AddCourse = () => {
                 </div>
                   
                     <div className="form-group">
-                        <button type="submit" className="btn btn-secondary">Add Course</button>
+                        <button type="submit" className="btn btn-secondary">Skapa Kurs</button>
                     </div>
                 </form>
             </div>
