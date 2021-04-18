@@ -10,6 +10,7 @@ import Home from './components/Home/Home/Home';
 import Courses from './components/Home/Courses/Courses';
 import Footer from './components/Home/Footer/Footer';
 import Admin from './components/Admin/Admin';
+import NoMatch from './components/NoMatch/NoMatch';
 import CreateAdmin from './components/Admin/CreateAdmin/CreateAdmin';
 import Reviews from './components/Reviews/Reviews';
 import CourseOrder from './components/CourseOrder/CourseOrder';
@@ -22,7 +23,7 @@ function App() {
   const [signInUser, setSignInUser] = useState({})
   return (
     <UserContext.Provider value={[signInUser, setSignInUser]}>
-      <p>Användare e-post: {signInUser.email}</p>
+      {/* <p>Användare e-post: {signInUser.email}</p> */}
     <Router>
       <Switch>
           <Route exact path="/">
@@ -54,6 +55,9 @@ function App() {
           </Route>
           <Route path="/courseOrder/:_id">
             <CourseOrder></CourseOrder>
+          </Route>
+          <Route path="/*">
+            <NoMatch></NoMatch>
           </Route>
         </Switch>
     </Router>

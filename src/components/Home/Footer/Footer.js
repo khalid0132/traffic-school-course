@@ -9,6 +9,7 @@ import { Form } from 'react-bootstrap';
 const Footer = () => {
    
     return (
+        
         <footer className="footer-area clear-both mt-5 text-white">
             <div className="d-flex justify-content-">
             <div className="container">

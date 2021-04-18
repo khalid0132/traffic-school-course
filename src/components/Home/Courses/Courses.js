@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import CourseDetail from '../CourseDetail/CourseDetail';
-import theory from './theory3.jpg';
-import instructor from './instructor.jpeg';
-import driving from './driving.jpg'
+import './Courses.css'
+// import theory from './theory3.jpg';
+// import instructor from './instructor.jpeg';
+// import driving from './driving.jpg'
 
 
 // const courseData = [
