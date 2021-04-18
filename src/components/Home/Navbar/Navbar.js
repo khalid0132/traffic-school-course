@@ -12,7 +12,7 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ml-auto active">
                     <li className="nav-item ">
-                        <a className="nav-link mr-5 text-white" href="#">Hem <span className="sr-only">(current)</span></a>
+                    <Link to="/home" className="nav-link mr-5 text-white">Hem</Link>
                     </li>
                     <li className="nav-item">
                     <Link to="/courses" className="nav-link mr-5 text-white">Våra kurser</Link>

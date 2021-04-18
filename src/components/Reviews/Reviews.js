@@ -16,8 +16,8 @@ const Reviews = () => {
             from: data.from,
             imageURL: imageURL
         };
-        // const url = 'http://localhost:7200/addReviews';
-        const url = `http://localhost:7200/addReviews`;
+        // const url = 'https://lit-coast-55410.herokuapp.com/addReviews';
+        const url = `https://lit-coast-55410.herokuapp.com/addReviews`;
         fetch(url, {
             method: 'POST',
             headers:{'content-type': 'application/json'},

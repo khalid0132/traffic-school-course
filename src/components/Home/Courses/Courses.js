@@ -26,7 +26,7 @@ import driving from './driving.jpg'
 const Courses = () => {
     const [courses, setCourses] = useState([]);
     useEffect(() =>{
-        fetch("http://localhost:7200/course")
+        fetch("https://lit-coast-55410.herokuapp.com/course")
         .then (res => res.json())
         .then (data => setCourses(data))
     }, [])

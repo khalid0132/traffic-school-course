@@ -13,7 +13,7 @@ const AddCourse = () => {
             price: data.price,
             imageURL: imageURL
         };
-        const url = `http://localhost:7200/addCourse`
+        const url = `https://lit-coast-55410.herokuapp.com/addCourse`
 
         fetch(url, {
             method: 'POST',

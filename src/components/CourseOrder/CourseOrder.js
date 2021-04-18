@@ -15,7 +15,7 @@ const CourseOrder = ({course}) => {
     // const {_id} = useParams();
     // const [service, setService] = useState([]);
     // useEffect(()=>{
-    //     fetch(`http://localhost:7200/course/${_id}`)
+    //     fetch(`https://lit-coast-55410.herokuapp.com/course/${_id}`)
     //     .then(res => res.json())
     //     .then(data => setService(data))
     // }, []);
