@@ -12,7 +12,7 @@ const ProcessPayment = () => {
 
             <SimpleCardForm></SimpleCardForm>
             <br/>
-            <Button variant="warning" href='https://secure.handelsbanken.se/logon/se/priv/sv/mbidqr/'>Payment by Bank</Button>{' '}
+            <Button variant="warning" href='https://secure.handelsbanken.se/logon/se/priv/sv/mbidqr/'>Payment av Banken</Button>{' '}
         </Elements>
 
     );

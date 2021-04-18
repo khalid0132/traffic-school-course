@@ -61,10 +61,6 @@ const Reviews = () => {
                     <input {...register("from",{ required: true })}  placeholder="City / Stad" className="form-control" />
                 </div>
               
-                {/* <div className="form-group">
-                    <input {...register("price",{ required: true })} placeholder="Price of the Course" className="form-control" />
-                    
-                </div> */}
                 <div className="form-group">
                 <input  type="file" onChange={handleImageUpload}  className="form-control" placeholder="Picture" />
                

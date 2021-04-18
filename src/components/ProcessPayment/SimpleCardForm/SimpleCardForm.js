@@ -33,11 +33,11 @@ const SimpleCardForm = () => {
   };
 
   return (
-   <div>
+   <div style={{border: '2px solid blue', margin: '20px', padding: '80px 15px'}}>
         <form onSubmit={handleSubmit}>
       <CardElement />
-      <button type="submit" disabled={!stripe}>
-        Payment by Stripe
+      <button className="mt-5 btn-success p-2 rounded" type="submit" disabled={!stripe}>
+        Payment av Stripe
       </button>
     </form>
     {

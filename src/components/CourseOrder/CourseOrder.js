@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
 import { Button, Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useParams, useHistory } from 'react-router';
@@ -30,26 +30,21 @@ const CourseOrder = ({course}) => {
     return (
         <Container>
 
-    <div className="row">
-          
-            <div className="col-md-5 mt-5">
-            <h2 ClassName="mb-5">Payment by Stripe or Bank</h2> <br/>
-                <ProcessPayment></ProcessPayment>
-            </div>
+      <div className="row">
             <div  className="col-md-7 p-5 mt-5" style={{ position: "absolute", right: 0, backgroundColor: "#f9f9f9" }}>
-                <h5 className="">Boka Service</h5>
+                <h5 className="">Kund information</h5>
                  <form className="p-3" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">
-                        <input {...register("name", { required: true })} placeholder="Full Namn" className="form-control" />
+                        <input {...register("Förenamn", { required: true })} placeholder="Förenamn" className="form-control" />
                        
                     </div>
                     <div className="form-group">
-                        <input {...register("course", { required: true })} placeholder="Kurs Namn" className="form-control" />
+                        <input {...register("Efternamn", { required: true })} placeholder="Efternamn" className="form-control" />
                       
                     </div>
 
                     <div className="form-group">
-                        <input {...register("price", { required: true })} placeholder="Kurs pris" className="form-control" />
+                        <input {...register("address", { required: true })} placeholder="Adress" className="form-control" />
                        
                     </div>
                     <div className="form-group">
@@ -57,24 +52,15 @@ const CourseOrder = ({course}) => {
                       
                     </div>
                     <div className="form-group">
-                        <button type="submit" className="btn btn-secondary">Boka Service</button>
+                        <button type="submit" className="btn btn-success">Skicka vidare</button>
                     </div>
                 </form>
             </div>
+            <div className="col-md-5 mt-5">
+            <h5 ClassName="mb-5 align-center font-w-bold">Payment av Stripe eller Banken</h5> <br/>
+                <ProcessPayment></ProcessPayment>
+            </div>
         </div>
-
-
-        {/* <div className="App mt-5 admin-form"> */}
-            
-          
-            {/* <p>{_id}</p> */}
-          {/* <h5>Namn: {service.name}</h5>
-          <p><img src={service.imageURL} alt=""/></p>
-          <p>Pris: <strong>{service.price}</strong> SEK</p> */}
-
-          {/* <Button variant="primary" onClick={()=>handleOrder(_id)}>Visa orders</Button>{' '} */}
-          {/* <Button variant="warning" href='https://secure.handelsbanken.se/logon/se/priv/sv/mbidqr/'>Payment/Betala nu</Button>{' '} */}
-      {/* </div> */}
     </Container>
     );
 };
